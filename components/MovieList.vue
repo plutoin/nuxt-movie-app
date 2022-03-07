@@ -25,7 +25,6 @@
 import { mapState } from 'vuex'
 import Loader from '~/components/Loader'
 import MovieItem from '~/components/MovieItem'
-
 export default {
   components: {
     Loader,

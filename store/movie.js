@@ -70,12 +70,11 @@ export default {
               page
             })
             const { Search } = res.data
-            // imdbID로 고유화하는 코드 수정!
             commit('updateState', {
-              movies: _uniqBy([
+              movies: [
                 ...state.movies,
-                ...Search
-              ], 'imdbID')
+                ..._uniqBy(Search, 'imdbID')
+              ]
             })
           }
         }
@@ -119,7 +118,6 @@ export default {
 
 // eslint-disable-next-line
 async function _fetchMovie(payload) {
-  const url = process.client 
-    ? '/api/movie' 
-    : `${process.env.CLIENT_URL}/api/movie`
-return await axios.post(url, payload)}
+  const url = process.client ? '/api/movie' : `${process.env.CLIENT_URL}/api/movie`
+  return await axios.post(url, payload)
+}

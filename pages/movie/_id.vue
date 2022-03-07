@@ -31,6 +31,11 @@
         <div class="title">
           {{ theMovie.Title }}
         </div>
+        <div class="labels">
+          <span>{{ theMovie.Released }}</span>
+          <span>{{ theMovie.Runtime }}</span>
+          <span>{{ theMovie.Country }}</span>
+        </div>
         <div class="plot">
           {{ theMovie.Plot }}
         </div>
@@ -40,11 +45,12 @@
             <div
               v-for="{ Source: name, Value: score } in theMovie.Ratings"
               :key="name"
+              :title="name"
               class="rating">
               <img
                 :src="`https://raw.githubusercontent.com/ParkYoungWoong/vue3-movie-app/master/src/assets/${name}.png`"
                 :alt="name" />
-              {{ score }}
+              <span>{{ score }}</span>
             </div>
           </div>
         </div>
@@ -71,7 +77,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import Loader from '@/components/Loader'
+import Loader from '~/components/Loader'
 export default {
   components: {
     Loader
@@ -80,27 +86,31 @@ export default {
     await store.dispatch('movie/searchMovieWithId', {
       id: params.id
     })
+    // asyncData 옵션에서 반환되는 값은,
+    // 자동으로 data 옵션으로 등록되며 반응성을 가집니다.
     return {
       imageLoading: true
     }
   },
   computed: {
     ...mapState('movie', [
-      'theMovie',
-      'loading'
+      'loading',
+      'theMovie'
     ])
   },
   methods: {
-    requestDiffSizeImage (url) {
+    requestDiffSizeImage(url, size = 700) {
+      // 잘못된 URL(Poster)인 경우.
       if (!url || url === 'N/A') {
         this.imageLoading = false
         return ''
       }
-      const src = url.replace('SX300', 'SX700')
-      this.$loadImage(src).then(() => {
-        console.log('then:', src, this.imageLoading)
-        this.imageLoading = false
-      })
+      const src = url.replace('SX300', `SX${size}`)
+      // 정상적인 URL인 경우.
+      this.$loadImage(src)
+        .then(() => {
+          this.imageLoading = false
+        })
       return src
     }
   },
@@ -112,7 +122,7 @@ export default {
         { hid: 'og:title', property: 'og:title', content: this.theMovie.Title },
         { hid: 'og:description', property: 'og:description', content: this.theMovie.Plot },
         { hid: 'og:image', property: 'og:image', content: this.theMovie.Poster },
-        { hid: 'og:url', property: 'og:url', content: process.env.CLIENT_URL + this.$route.fullPath }
+        { hid: 'og:url', property: 'og:url', content: `${process.env.CLIENT_URL}${this.$route.fullPath}` }
       ]
     }
   }
@@ -120,12 +130,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  padding-top: 40px;
+}
 .skeletons {
   display: flex;
   .poster {
     flex-shrink: 0;
     width: 500px;
-    height: 500px * (3 / 2);
+    height: 500px * 3/2;
     margin-right: 70px;
   }
   .specs {
@@ -160,7 +173,7 @@ export default {
   color: $gray-600;
   .poster {
     width: 500px;
-    height: 500px * (3 / 2);
+    height: 500px * 3/2;
     margin-right: 70px;
     border-radius: 10px;
     background-color: $gray-200;
@@ -213,6 +226,34 @@ export default {
       color: $black;
       font-family: "Oswald", sans-serif;
       font-size: 20px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    .poster {
+      width: 300px;
+      height: 300px * 3/2;
+      margin-right: 40px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    display: block;
+    .poster {
+      margin-bottom: 40px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .specs {
+      .title {
+        font-size: 50px;
+      }
+      .ratings {
+        .rating-wrap {
+          display: block;
+          .rating {
+            margin-top: 10px;
+          }
+        }
+      }
     }
   }
 }

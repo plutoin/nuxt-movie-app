@@ -6,14 +6,14 @@
         v-for="nav in navigations"
         :key="nav.name"
         class="nav-item">
-        <RouterLink
+        <NuxtLink
           :to="nav.href"
           active-class="active"
           :class="{ active: isMatch(nav.path) }"
           class="nav-link"
           exact>
           {{ nav.name }}
-        </RouterLink>
+        </NuxtLink>
       </div>
     </div>
     <div
@@ -29,7 +29,6 @@
 <script>
 import { mapState } from 'vuex'
 import Logo from '~/components/Logo'
-
 export default {
   components: {
     Logo

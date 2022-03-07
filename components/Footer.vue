@@ -11,7 +11,6 @@
 
 <script>
 import Logo from '~/components/Logo'
-
 export default {
   components: {
     Logo
@@ -34,4 +33,3 @@ footer {
     margin-bottom: 4px;
   }
 }
-</style>

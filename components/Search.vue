@@ -102,7 +102,6 @@ export default {
     flex-shrink: 0;
     font-weight: 700;
   }
-
   @include media-breakpoint-down(lg) {
     display: block;
     input {

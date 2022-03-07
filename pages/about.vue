@@ -19,7 +19,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import Loader from '@/components/Loader'
+import Loader from '~/components/Loader'
 export default {
   components: {
     Loader
@@ -55,8 +55,7 @@ export default {
         { hid: 'og:title', property: 'og:title', content: this.name },
         { hid: 'og:description', property: 'og:description', content: this.email },
         { hid: 'og:image', property: 'og:image', content: this.image },
-        { hid: 'og:url', property: 'og:url', content: process.env.CLIENT_URL + this.$route.fullPath }
-        // http://localhost:3000 + /about
+        { hid: 'og:url', property: 'og:url', content: `${process.env.CLIENT_URL}${this.$route.fullPath}` }
       ]
     }
   }
