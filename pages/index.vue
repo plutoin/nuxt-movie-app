@@ -7,15 +7,15 @@
 </template>
 
 <script>
-import Search from '@/components/Search'
-import MovieList from '@/components/MovieList'
-import Headline from '@/components/Headline'
+import Headline from '~/components/Headline'
+import Search from '~/components/Search'
+import MovieList from '~/components/MovieList'
 
 export default {
   components: {
+    Headline,
     Search,
-    MovieList,
-    Headline
-  }
+    MovieList
+  },
 }
 </script>
