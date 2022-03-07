@@ -27,9 +27,9 @@ describe('About 페이지로 이동', () => {
     // About 내비게이션 버튼의 활성화(active) 확인!
     cy.get('header .nav-link.active')
       .contains('About')
-    // About 이름이 'HEROPY'인지 확인!
+    // About 이름이 'plutoin'인지 확인!
     cy.get('.name')
-      .contains('HEROPY')
+      .contains('plutoin')
   })
 
   it('영화 상세 페이지로 이동합니다', () => {
@@ -54,8 +54,8 @@ describe('About 페이지로 이동', () => {
     // About 내비게이션 버튼의 활성화(active) 확인!
     cy.get('header .nav-link.active')
       .contains('About')
-    // About 이름이 'HEROPY'인지 확인!
+    // About 이름이 'plutoin'인지 확인!
     cy.get('.name')
-      .contains('HEROPY')
+      .contains('plutoin')
   })
 })
