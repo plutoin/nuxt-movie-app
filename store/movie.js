@@ -119,6 +119,7 @@ export default {
 
 // eslint-disable-next-line
 async function _fetchMovie(payload) {
-  const url = process.client
-  return await axios.post('/.netlify/functions/movie', payload)
-}
+  const url = process.client 
+    ? '/api/movie' 
+    : `${process.env.CLIENT_URL}/api/movie`
+return await axios.post(url, payload)}
