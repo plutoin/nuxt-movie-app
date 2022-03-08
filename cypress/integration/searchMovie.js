@@ -44,7 +44,7 @@ describe('영화 검색(겨울왕국2)', () => {
   it('영화 상세 정보를 확인합니다', () => {
     // 이동한 페이지 주소 확인!
     cy.url()
-      .should('include', '/movie/tt4520988')
+      .should('include', '/movie/tt5083738')
     // 페이지 렌더링 기다리기!
     cy.wait(1000)
     // Movie 내비게이션 버튼의 활성화(active) 확인!
