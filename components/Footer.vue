@@ -28,7 +28,9 @@ footer {
   padding: 70px 0;
   text-align: center;
   opacity: .3;
+  a {
   text-decoration: none;
+  }
   .logo {
     display: block;
     margin-bottom: 4px;
