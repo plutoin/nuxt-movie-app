@@ -9,7 +9,7 @@
 - [**DEMO**](https://nuxt-movie-app-tests.herokuapp.com/)
 - [**Vue3 프로젝트**](https://github.com/plutoin/vue-movie-app)
 
-📒 주요업무
+📒 📒 **주요업무**
 
 - 기존의 Vue 프로젝트를 Nuxt.js 프로젝트로 마이그레이션
 - Jest와 Cypress를 활용해 각각 단위 / E2E 테스트 적용
