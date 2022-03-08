@@ -1,69 +1,28 @@
-# nuxt-movie-app
+# 🎬 NUXT MOVIE APP
 
-## Build Setup
+### < 영화 검색 사이트 >
 
-```bash
-# install dependencies
-$ npm install
+🗓️ **작업기간** : 2022. 03
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+👨‍💻 **투입인원** : 1명 (개인 프로젝트)
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+- [**DEMO**](https://nuxt-movie-app-tests.herokuapp.com/)
 
-# generate static project
-$ npm run generate
-```
+<br/>
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+🌱 **스킬 및 사용 툴**
 
-## Special Directories
+![Nuxt.js](https://img.shields.io/badge/Nuxt.js-%23006643.svg?style=flat-square&logo=nuxtdotjs&logoColor=%2300DC82)
+![Vue.js](https://img.shields.io/badge/Vue.js-%2335495e.svg?style=flat-square&logo=vuedotjs&logoColor=%234FC08D)
+![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E)
+![SCSS](https://img.shields.io/badge/Scss-%23CC6699.svg?style=flat-square&logo=SASS&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-%237952B3.svg?style=flat-square&logo=bootstrap&logoColor=white)
+![Webpack](https://img.shields.io/badge/Webpack-%238DD6F9.svg?style=flat-square&logo=Webpack&logoColor=black)
+![Babel](https://img.shields.io/badge/Babel-%23F9DC3E.svg?style=flat-square&logo=Babel&logoColor=black)
+![Cypress](https://img.shields.io/badge/Cypress-%23000000.svg?style=flat-square&logo=cypress&logoColor=#00C7B7)
+![Jest](https://img.shields.io/badge/Jest-%23C21325.svg?style=flat-square&logo=jest&logoColor=#00C7B7)
+![Express](https://img.shields.io/badge/Express-%23000000.svg?style=flat-square&logo=express&logoColor=#00C7B7)
+![Heroku](https://img.shields.io/badge/Heroku-%23430098.svg?style=flat-square&logo=heroku&logoColor=#00C7B7)
+![Git](https://img.shields.io/badge/Git-%23F05032.svg?style=flat-square&logo=git&logoColor=white)
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+<img src="https://user-images.githubusercontent.com/66389585/154122889-95ff3c0c-7e79-4c98-b7ce-aca89d8324dd.gif" width="700px"/>
