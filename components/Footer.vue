@@ -2,7 +2,7 @@
   <footer>
     <Logo />
     <a
-      href="https://github.com/ParkYoungWoong"
+      href="https://github.com/plutoin"
       target="_blank">
       (c){{ new Date().getFullYear() }} {{ name }}
     </a>
@@ -28,6 +28,7 @@ footer {
   padding: 70px 0;
   text-align: center;
   opacity: .3;
+  text-decoration: none;
   .logo {
     display: block;
     margin-bottom: 4px;
