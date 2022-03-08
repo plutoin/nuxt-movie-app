@@ -7,6 +7,7 @@
 👨‍💻 **투입인원** : 1명 (개인 프로젝트)
 
 - [**DEMO**](https://nuxt-movie-app-tests.herokuapp.com/)
+- [**Vue3 프로젝트**](https://github.com/plutoin/vue-movie-app)
 
 <br/>
 
